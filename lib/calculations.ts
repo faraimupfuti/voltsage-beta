@@ -103,7 +103,7 @@ export const APPLIANCE_CATALOG: Appliance[] = [
   { id:'fridge_single',  name:'Single Door Fridge (250 L)',     cat:'Refrigeration', type:'energy', runningWatt:150, surge:6, dutyCycle:0.35, kwh:1.5 },
   { id:'fridge_double',  name:'Double Door Fridge (250–400 L)', cat:'Refrigeration', type:'energy', runningWatt:250, surge:6, dutyCycle:0.35, kwh:1.6 },
   { id:'fridge_sxs',     name:'Side-by-Side Refrigerator',      cat:'Refrigeration', type:'energy', runningWatt:400, surge:6, dutyCycle:0.35, kwh:3.0 },
-  { id:'fridge_commercial',name:'Commercial Display Fridge',    cat:'Refrigeration', type:'energy', runningWatt:800, surge:5, dutyCycle:0.35, kwh:10.0 },
+  { id:'fridge_commercial',name:'Commercial Display Fridge',    cat:'Refrigeration', type:'energy', runningWatt:800, surge:6, dutyCycle:0.35, kwh:10.0 },
   { id:'chestfreezer',   name:'Chest Freezer',                  cat:'Refrigeration', type:'energy', runningWatt:200, surge:6, dutyCycle:0.35, kwh:1.7 },
   { id:'uprightfreezer', name:'Upright Freezer',                cat:'Refrigeration', type:'energy', runningWatt:260, surge:6, dutyCycle:0.35, kwh:2.2 },
   // Water Systems (surge 3)
