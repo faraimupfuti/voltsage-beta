@@ -396,7 +396,7 @@ export default function ResidentialTool() {
 
                 <p className="text-[10px] font-mono text-slate-600 mt-4 leading-relaxed">
                   Final system sizing and equipment selection should be reviewed and verified by
-                  a qualified Engineer or Solar Design Professional before installation.
+                  a qualified Engineer or Solar Design Professional before procurement and installation.
                 </p>
               </div>
             </div>
