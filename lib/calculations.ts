@@ -98,7 +98,7 @@ export const APPLIANCE_CATALOG: Appliance[] = [
   { id:'laptop', name:'Laptop',                cat:'Entertainment & Electronics', type:'power', watt:65 },
   { id:'desktop',name:'Desktop Computer',      cat:'Entertainment & Electronics', type:'power', watt:150 },
   { id:'printer',name:'Printer',               cat:'Entertainment & Electronics', type:'power', watt:100 },
-  // Refrigeration (duty-cycle — surge 6)
+  // Refrigeration (duty-cycle 0.35, surge 3)
   { id:'fridge_bar',     name:'Bar Fridge (150 L)',             cat:'Refrigeration', type:'energy', runningWatt:100, surge:3, dutyCycle:0.35, kwh:1.0 },
   { id:'fridge_single',  name:'Single Door Fridge (250 L)',     cat:'Refrigeration', type:'energy', runningWatt:150, surge:3, dutyCycle:0.35, kwh:1.5 },
   { id:'fridge_double',  name:'Double Door Fridge (250–400 L)', cat:'Refrigeration', type:'energy', runningWatt:250, surge:3, dutyCycle:0.35, kwh:1.6 },
