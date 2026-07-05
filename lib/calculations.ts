@@ -96,7 +96,7 @@ export const APPLIANCE_CATALOG: Appliance[] = [
   { id:'decoder',name:'Decoder',               cat:'Entertainment & Electronics', type:'power', watt:20 },
   { id:'router', name:'WiFi Router',            cat:'Entertainment & Electronics', type:'power', watt:15 },
   { id:'laptop', name:'Laptop',                cat:'Entertainment & Electronics', type:'power', watt:65 },
-  { id:'desktop',name:'Desktop Computer',      cat:'Entertainment & Electronics', type:'power', watt:250 },
+  { id:'desktop',name:'Desktop Computer',      cat:'Entertainment & Electronics', type:'power', watt:150 },
   { id:'printer',name:'Printer',               cat:'Entertainment & Electronics', type:'power', watt:100 },
   // Refrigeration (duty-cycle — surge 6)
   { id:'fridge_bar',     name:'Bar Fridge (150 L)',             cat:'Refrigeration', type:'energy', runningWatt:100, surge:6, dutyCycle:0.35, kwh:1.0 },
