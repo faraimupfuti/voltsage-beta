@@ -59,12 +59,12 @@ export const PSH_TABLE: PSHGroup[] = [
     { id: 'uganda',      label: 'Uganda',          psh: 5.5 },
   ]},
   { group: 'Africa — Category E (5.0 h/day)', options: [
-    { id: 'burundi',    label: 'Burundi',          psh: 5.0 },
-    { id: 'drc',        label: 'DR Congo',         psh: 5.0 },
-    { id: 'eqguinea',   label: 'Equatorial Guinea',psh: 5.0 },
-    { id: 'gabon',      label: 'Gabon',            psh: 5.0 },
-    { id: 'liberia',    label: 'Liberia',          psh: 5.0 },
-    { id: 'sierraleone',label: 'Sierra Leone',     psh: 5.0 },
+    { id: 'burundi',    label: 'Burundi',           psh: 5.0 },
+    { id: 'drc',        label: 'DR Congo',          psh: 5.0 },
+    { id: 'eqguinea',   label: 'Equatorial Guinea', psh: 5.0 },
+    { id: 'gabon',      label: 'Gabon',             psh: 5.0 },
+    { id: 'liberia',    label: 'Liberia',           psh: 5.0 },
+    { id: 'sierraleone',label: 'Sierra Leone',      psh: 5.0 },
   ]},
 ]
 
@@ -94,18 +94,18 @@ export const APPLIANCE_CATALOG: Appliance[] = [
   { id:'tv1',    name:'LED TV (32–43")',        cat:'Entertainment & Electronics', type:'power', watt:80 },
   { id:'tv2',    name:'LED TV (50–65")',        cat:'Entertainment & Electronics', type:'power', watt:120 },
   { id:'decoder',name:'Decoder',               cat:'Entertainment & Electronics', type:'power', watt:20 },
-  { id:'router', name:'WiFi Router',            cat:'Entertainment & Electronics', type:'power', watt:15 },
+  { id:'router', name:'WiFi Router',           cat:'Entertainment & Electronics', type:'power', watt:15 },
   { id:'laptop', name:'Laptop',                cat:'Entertainment & Electronics', type:'power', watt:65 },
-  { id:'desktop',name:'Desktop Computer',      cat:'Entertainment & Electronics', type:'power', watt:150 },
+  { id:'desktop',name:'Desktop Computer',      cat:'Entertainment & Electronics', type:'power', watt:250 },
   { id:'printer',name:'Printer',               cat:'Entertainment & Electronics', type:'power', watt:100 },
-  // Refrigeration (duty-cycle 0.35, surge 3)
-  { id:'fridge_bar',     name:'Bar Fridge (150 L)',             cat:'Refrigeration', type:'energy', runningWatt:100, surge:3, dutyCycle:0.35, kwh:1.0 },
-  { id:'fridge_single',  name:'Single Door Fridge (250 L)',     cat:'Refrigeration', type:'energy', runningWatt:150, surge:3, dutyCycle:0.35, kwh:1.5 },
-  { id:'fridge_double',  name:'Double Door Fridge (250–400 L)', cat:'Refrigeration', type:'energy', runningWatt:250, surge:3, dutyCycle:0.35, kwh:1.6 },
-  { id:'fridge_sxs',     name:'Side-by-Side Refrigerator',      cat:'Refrigeration', type:'energy', runningWatt:400, surge:3, dutyCycle:0.35, kwh:3.0 },
-  { id:'fridge_commercial',name:'Commercial Display Fridge',    cat:'Refrigeration', type:'energy', runningWatt:800, surge:3, dutyCycle:0.35, kwh:10.0 },
-  { id:'chestfreezer',   name:'Chest Freezer',                  cat:'Refrigeration', type:'energy', runningWatt:200, surge:3, dutyCycle:0.35, kwh:1.7 },
-  { id:'uprightfreezer', name:'Upright Freezer',                cat:'Refrigeration', type:'energy', runningWatt:260, surge:3, dutyCycle:0.35, kwh:2.2 },
+  // Refrigeration (duty-cycle — surge 6)
+  { id:'fridge_bar',     name:'Bar Fridge (150 L)',             cat:'Refrigeration', type:'energy', runningWatt:100, surge:6, dutyCycle:0.35, kwh:1.0 },
+  { id:'fridge_single',  name:'Single Door Fridge (250 L)',     cat:'Refrigeration', type:'energy', runningWatt:150, surge:6, dutyCycle:0.35, kwh:1.5 },
+  { id:'fridge_double',  name:'Double Door Fridge (250–400 L)', cat:'Refrigeration', type:'energy', runningWatt:250, surge:6, dutyCycle:0.35, kwh:1.6 },
+  { id:'fridge_sxs',     name:'Side-by-Side Refrigerator',      cat:'Refrigeration', type:'energy', runningWatt:400, surge:6, dutyCycle:0.35, kwh:3.0 },
+  { id:'fridge_commercial',name:'Commercial Display Fridge',    cat:'Refrigeration', type:'energy', runningWatt:800, surge:5, dutyCycle:0.35, kwh:10.0 },
+  { id:'chestfreezer',   name:'Chest Freezer',                  cat:'Refrigeration', type:'energy', runningWatt:200, surge:6, dutyCycle:0.35, kwh:1.7 },
+  { id:'uprightfreezer', name:'Upright Freezer',                cat:'Refrigeration', type:'energy', runningWatt:260, surge:6, dutyCycle:0.35, kwh:2.2 },
   // Water Systems (surge 3)
   { id:'boreholesmall', name:'Borehole Pump — Small (0.75 kW)', cat:'Water Systems', type:'power', watt:750,  surge:3 },
   { id:'boreholemed',   name:'Borehole Pump — Medium (1.1 kW)', cat:'Water Systems', type:'power', watt:1100, surge:3 },
@@ -121,7 +121,7 @@ export const APPLIANCE_CATALOG: Appliance[] = [
   { id:'ceilingfan',  name:'Ceiling Fan',                        cat:'Climate Control', type:'power', watt:60 },
   { id:'pedestalfan', name:'Pedestal Fan',                       cat:'Climate Control', type:'power', watt:80 },
   { id:'acsmall',     name:'Small Air Conditioner (9000 BTU)',   cat:'Climate Control', type:'power', watt:900,  surge:3 },
-  { id:'acmed',       name:'Medium Air Conditioner (12000 BTU)',  cat:'Climate Control', type:'power', watt:1200, surge:3 },
+  { id:'acmed',       name:'Medium Air Conditioner (12000 BTU)', cat:'Climate Control', type:'power', watt:1200, surge:3 },
   { id:'aclarge',     name:'Large Air Conditioner (18000 BTU)',  cat:'Climate Control', type:'power', watt:1800, surge:3 },
   // Laundry
   { id:'washer', name:'Washing Machine', cat:'Laundry', type:'power', watt:500 },
@@ -167,15 +167,26 @@ export function isActiveAtSlot(t: number, start: number, end: number): boolean {
   return (t >= start && t < end) || (t + 24 >= start && t + 24 < end)
 }
 
-// ----- Row type -----
+// ----- Row types -----
 export interface ApplianceRow {
-  rowId: number
-  applianceId: string
-  qty: number
-  periods: { from: string; to: string }[]
-  customWatt?: number | null
-  miscName?: string
-  miscWatt?: number
+  rowId:      number
+  applianceId:string
+  qty:        number
+  periods:    { from: string; to: string }[]
+  customWatt?: number | null   // Advanced: override default watt
+  miscName?:  string
+  miscWatt?:  number
+}
+
+export interface AgEquipmentRow {
+  rowId:    number
+  eqId:     string
+  name:     string
+  kw:       number             // Default rated power
+  customKW?: number | null     // Advanced: override default kW
+  surge:    number
+  qty:      number
+  periods:  { from: string; to: string }[]
 }
 
 // ----- Main Sizing Calculation -----
@@ -190,7 +201,7 @@ export interface SizingResult {
   PpvRounded:   number
   panelCount:   number
   autonomyHours:number
-  profile:      number[]  // 48 half-hour slots in watts
+  profile:      number[]
   catTotalsWh:  Record<string, number>
 }
 
@@ -200,7 +211,7 @@ export function calculateResidentialSizing(
   psh:      number,
   autonomy: number,
   dod = 0.8, battEff = 0.95, chargeEff = 0.85,
-  mu = 0.75,  panelWp = 550
+  mu = 0.75, panelWp = 550
 ): SizingResult {
   const SLOTS = 48, SLOT_H = 0.5
   const profile = new Array<number>(SLOTS).fill(0)
@@ -219,13 +230,14 @@ export function calculateResidentialSizing(
       const avgKW = (r.qty * kwhPerDay) / 24
       for (let s = 0; s < SLOTS; s++) profile[s] += avgKW * 1000
     } else {
+      // In Advanced mode use customWatt if set, else default
       const watt = r.miscWatt ?? (mode === 'advanced' && r.customWatt ? r.customWatt : (a.watt ?? 0))
       r.periods.forEach(p => {
-        const hrs = timeToHours(p.from, p.to)
+        const hrs    = timeToHours(p.from, p.to)
         const nightH = nightHoursForPeriod(p.from, p.to)
-        Ed_Wh += r.qty * watt * hrs
+        Ed_Wh     += r.qty * watt * hrs
         Enight_Wh += r.qty * watt * nightH
-        Eday_Wh += r.qty * watt * (hrs - nightH)
+        Eday_Wh   += r.qty * watt * (hrs - nightH)
         catTotalsWh[a.cat] = (catTotalsWh[a.cat] ?? 0) + r.qty * watt * hrs
         const { start, end } = periodRange(p.from, p.to)
         for (let s = 0; s < SLOTS; s++) {
@@ -235,11 +247,9 @@ export function calculateResidentialSizing(
     }
   })
 
-  // Peak demand from load profile
   let Pmax_W = 0, tMaxSlot = 0
   profile.forEach((w, s) => { if (w > Pmax_W) { Pmax_W = w; tMaxSlot = s } })
 
-  // Surge demand at peak moment
   const tMax = tMaxSlot * SLOT_H
   let surgeExtra = 0
   rows.forEach(r => {
@@ -257,26 +267,20 @@ export function calculateResidentialSizing(
     }
   })
 
-  const Ed_kWh     = Ed_Wh / 1000
-  const Enight_kWh = Enight_Wh / 1000
-  const Eday_kWh   = Eday_Wh / 1000
-  const Peak_kW    = Pmax_W / 1000
-  const Surge_kW   = (Pmax_W + surgeExtra) / 1000
+  const Ed_kWh = Ed_Wh / 1000, Enight_kWh = Enight_Wh / 1000, Eday_kWh = Eday_Wh / 1000
+  const Peak_kW = Pmax_W / 1000, Surge_kW = (Pmax_W + surgeExtra) / 1000
 
-  const invRaw  = Peak_kW * 1.3
-  const invSize = roundUpToStandardInverter(invRaw)
-
-  const CbattRaw    = Enight_kWh > 0 ? (Enight_kWh * autonomy) / (dod * battEff) : 0
+  const invRaw       = Peak_kW * 1.3
+  const invSize      = roundUpToStandardInverter(invRaw)
+  const CbattRaw     = Enight_kWh > 0 ? (Enight_kWh * autonomy) / (dod * battEff) : 0
   const CbattRounded = Math.ceil(CbattRaw * 2) / 2
-
   const usable       = CbattRounded * dod * battEff
   const avgNightLoad = Enight_kWh / 12
   const autonomyHours = avgNightLoad > 0 ? usable / avgNightLoad : 0
-
-  const Epv     = Eday_kWh + (CbattRounded > 0 ? CbattRounded / chargeEff : 0)
-  const pvRaw   = Epv > 0 ? Epv / (psh * mu) : 0
-  const PpvRounded = Math.ceil(pvRaw * 2) / 2
-  const panelCount = Math.ceil((PpvRounded * 1000) / panelWp)
+  const Epv          = Eday_kWh + (CbattRounded > 0 ? CbattRounded / chargeEff : 0)
+  const pvRaw        = Epv > 0 ? Epv / (psh * mu) : 0
+  const PpvRounded   = Math.ceil(pvRaw * 2) / 2
+  const panelCount   = Math.ceil((PpvRounded * 1000) / panelWp)
 
   return { Ed_kWh, Enight_kWh, Eday_kWh, Peak_kW, Surge_kW, invSize, CbattRounded, PpvRounded, panelCount, autonomyHours, profile, catTotalsWh }
 }
@@ -290,21 +294,15 @@ export interface BatteryRuntimeResult {
 }
 
 export function calculateBatteryRuntime(
-  capacityKWh: number,
-  dodPct: number,
-  effPct: number,
-  loadKW: number,
+  capacityKWh: number, dodPct: number, effPct: number, loadKW: number,
   sizingResult?: SizingResult
 ): BatteryRuntimeResult {
   const dod = dodPct / 100, eff = effPct / 100
-  const usableKWh = capacityKWh * dod * eff
+  const usableKWh    = capacityKWh * dod * eff
   const runtimeHours = loadKW > 0 ? usableKWh / loadKW : 0
-
-  const runtimeAtPeakHours = sizingResult && sizingResult.Peak_kW > 0
-    ? usableKWh / sizingResult.Peak_kW : null
+  const runtimeAtPeakHours = sizingResult && sizingResult.Peak_kW > 0 ? usableKWh / sizingResult.Peak_kW : null
   const avgLoad = sizingResult ? sizingResult.Ed_kWh / 24 : null
   const runtimeAtAvgHours  = avgLoad && avgLoad > 0 ? usableKWh / avgLoad : null
-
   return { usableKWh, runtimeHours, runtimeAtPeakHours, runtimeAtAvgHours }
 }
 
@@ -321,16 +319,16 @@ export const AG_ACTIVITIES: Record<AgActivity, AgEquipment[]> = {
     { id:'centrepivot', name:'Centre Pivot Motor',    kw:3.0, surge:2.5 },
   ],
   'Dairy Farming': [
-    { id:'milking',      name:'Milking Machine',       kw:3.0, surge:3.0 },
-    { id:'milk_cooling', name:'Milk Cooling Compressor',kw:5.5,surge:3.5 },
-    { id:'water_pump',   name:'Water Pump',            kw:1.5, surge:3.0 },
-    { id:'vent_fan',     name:'Ventilation Fan',       kw:1.1, surge:2.5 },
+    { id:'milking',      name:'Milking Machine',        kw:3.0, surge:3.0 },
+    { id:'milk_cooling', name:'Milk Cooling Compressor',kw:5.5, surge:3.5 },
+    { id:'water_pump',   name:'Water Pump',             kw:1.5, surge:3.0 },
+    { id:'vent_fan',     name:'Ventilation Fan',        kw:1.1, surge:2.5 },
   ],
   'Poultry Farming': [
-    { id:'vent_fan',   name:'Ventilation Fan',      kw:0.75, surge:2.5 },
-    { id:'lighting',   name:'Poultry Lighting',     kw:0.5,  surge:1.0 },
-    { id:'feeder',     name:'Automatic Feeder',     kw:0.37, surge:2.5 },
-    { id:'water_pump', name:'Water Pump',           kw:0.75, surge:3.0 },
+    { id:'vent_fan',   name:'Ventilation Fan',  kw:0.75, surge:2.5 },
+    { id:'lighting',   name:'Poultry Lighting', kw:0.5,  surge:1.0 },
+    { id:'feeder',     name:'Automatic Feeder', kw:0.37, surge:2.5 },
+    { id:'water_pump', name:'Water Pump',       kw:0.75, surge:3.0 },
   ],
   'Piggery': [
     { id:'vent_fan',   name:'Ventilation Fan', kw:0.75, surge:2.5 },
@@ -344,34 +342,25 @@ export const AG_ACTIVITIES: Record<AgActivity, AgEquipment[]> = {
     { id:'gh_light',   name:'Greenhouse Lighting',kw:1.0, surge:1.0 },
   ],
   'Crop Processing': [
-    { id:'hammer_mill', name:'Hammer Mill',    kw:7.5, surge:2.5 },
-    { id:'maize_mill',  name:'Maize Mill',     kw:5.5, surge:2.5 },
-    { id:'oil_press',   name:'Oil Press',      kw:4.0, surge:2.5 },
-    { id:'grain_clean', name:'Grain Cleaner',  kw:2.2, surge:2.5 },
-    { id:'conveyor',    name:'Conveyor',       kw:1.5, surge:2.5 },
+    { id:'hammer_mill', name:'Hammer Mill',   kw:7.5, surge:2.5 },
+    { id:'maize_mill',  name:'Maize Mill',    kw:5.5, surge:2.5 },
+    { id:'oil_press',   name:'Oil Press',     kw:4.0, surge:2.5 },
+    { id:'grain_clean', name:'Grain Cleaner', kw:2.2, surge:2.5 },
+    { id:'conveyor',    name:'Conveyor',      kw:1.5, surge:2.5 },
   ],
   'Mixed Farming': [
-    { id:'borehole',    name:'Borehole Pump',         kw:7.5, surge:3.0 },
-    { id:'milking',     name:'Milking Machine',        kw:3.0, surge:3.0 },
-    { id:'vent_fan',    name:'Ventilation Fan',        kw:0.75,surge:2.5 },
-    { id:'hammer_mill', name:'Hammer Mill',            kw:7.5, surge:2.5 },
+    { id:'borehole',    name:'Borehole Pump',        kw:7.5, surge:3.0 },
+    { id:'milking',     name:'Milking Machine',       kw:3.0, surge:3.0 },
+    { id:'vent_fan',    name:'Ventilation Fan',       kw:0.75,surge:2.5 },
+    { id:'hammer_mill', name:'Hammer Mill',           kw:7.5, surge:2.5 },
     { id:'irrig_pump',  name:'Irrigation / Booster',  kw:2.2, surge:3.0 },
-    { id:'feed_mixer',  name:'Feed Mixer',             kw:2.2, surge:2.5 },
+    { id:'feed_mixer',  name:'Feed Mixer',            kw:2.2, surge:2.5 },
   ],
-}
-
-export interface AgEquipmentRow {
-  rowId:    number
-  eqId:     string
-  name:     string
-  kw:       number
-  surge:    number
-  qty:      number
-  periods:  { from: string; to: string }[]
 }
 
 export function calculateAgriculturalSizing(
   equipRows: AgEquipmentRow[],
+  mode:      'standard' | 'advanced',
   psh:       number,
   autonomy:  number,
   dod = 0.8, battEff = 0.95, chargeEff = 0.85, mu = 0.75, panelWp = 550
@@ -381,15 +370,17 @@ export function calculateAgriculturalSizing(
   let Ed = 0, Enight = 0, Eday = 0
 
   equipRows.forEach(r => {
+    // In Advanced mode use customKW override if set
+    const kw = mode === 'advanced' && r.customKW ? r.customKW : r.kw
     r.periods.forEach(p => {
       const hrs    = timeToHours(p.from, p.to)
       const nightH = nightHoursForPeriod(p.from, p.to)
-      Ed     += r.qty * r.kw * hrs
-      Enight += r.qty * r.kw * nightH
-      Eday   += r.qty * r.kw * (hrs - nightH)
+      Ed     += r.qty * kw * hrs
+      Enight += r.qty * kw * nightH
+      Eday   += r.qty * kw * (hrs - nightH)
       const { start, end } = periodRange(p.from, p.to)
       for (let s = 0; s < SLOTS; s++) {
-        if (isActiveAtSlot(s * SLOT_H, start, end)) profile[s] += r.qty * r.kw * 1000
+        if (isActiveAtSlot(s * SLOT_H, start, end)) profile[s] += r.qty * kw * 1000
       }
     })
   })
@@ -401,23 +392,25 @@ export function calculateAgriculturalSizing(
   let surgeExtra = 0
   equipRows.forEach(r => {
     if (r.surge <= 1) return
-    const active = r.periods.some(p => { const { start, end } = periodRange(p.from, p.to); return isActiveAtSlot(tMax, start, end) })
-    if (active) surgeExtra += r.qty * r.kw * 1000 * (r.surge - 1)
+    const kw     = mode === 'advanced' && r.customKW ? r.customKW : r.kw
+    const active = r.periods.some(p => {
+      const { start, end } = periodRange(p.from, p.to)
+      return isActiveAtSlot(tMax, start, end)
+    })
+    if (active) surgeExtra += r.qty * kw * 1000 * (r.surge - 1)
   })
 
   const Peak_kW    = Pmax / 1000
   const Surge_kW   = (Pmax + surgeExtra) / 1000
   const invRaw     = Peak_kW * 1.3
   const invSize    = roundUpToStandardInverter(invRaw)
-
-  const CbattRaw    = Enight > 0 ? (Enight * autonomy) / (dod * battEff) : 0
+  const CbattRaw   = Enight > 0 ? (Enight * autonomy) / (dod * battEff) : 0
   const CbattRounded = Math.ceil(CbattRaw * 2) / 2
   const usable       = CbattRounded * dod * battEff
   const avgNight     = Enight / 12
   const autonomyHours = avgNight > 0 ? usable / avgNight : 0
-
-  const Epv      = Eday + (CbattRounded > 0 ? CbattRounded / chargeEff : 0)
-  const pvRaw    = Epv > 0 ? Epv / (psh * mu) : 0
+  const Epv        = Eday + (CbattRounded > 0 ? CbattRounded / chargeEff : 0)
+  const pvRaw      = Epv > 0 ? Epv / (psh * mu) : 0
   const PpvRounded = Math.ceil(pvRaw * 2) / 2
   const panelCount = Math.ceil((PpvRounded * 1000) / panelWp)
 
