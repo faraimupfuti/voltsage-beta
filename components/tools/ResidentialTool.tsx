@@ -529,17 +529,6 @@ export default function ResidentialTool() {
                   </div>
                 </details>
 
-                {/* Autonomy (advanced only) */}
-                {mode === 'advanced' && (
-                  <div>
-                    <Label>Battery autonomy (days)</Label>
-                    <input
-                      type="number" min={0.5} step={0.5} value={autonomy}
-                      onChange={e => setAutonomy(parseFloat(e.target.value) || 1)}
-                      className="tool-input w-28 text-xs text-white"
-                    />
-                  </div>
-                )}
               </div>
 
               {/* ──────────────── RIGHT: outputs ──────────────── */}
@@ -578,14 +567,14 @@ export default function ResidentialTool() {
                   )}
                 </div>
 
-                {/* Readout grid — surge hidden */}
+                {/* Readout grid */}
                 <div className="grid grid-cols-2 gap-3">
-                  <ReadoutCard label="Daily energy"              value={result ? result.Ed_kWh.toFixed(2) : '—'}       unit="kWh/day" accent />
-                  <ReadoutCard label="Peak demand"               value={result ? result.Peak_kW.toFixed(2) : '—'}      unit="kW"      amber />
-                  <ReadoutCard label="Recommended inverter size" value={result ? String(result.invSize) : '—'}         unit="kW" />
-                  <ReadoutCard label="Recommended battery"       value={result ? result.CbattRounded.toFixed(1) : '—'} unit="kWh"     accent />
-                  <ReadoutCard label="Recommended PV array"      value={result ? result.PpvRounded.toFixed(2) : '—'}  unit="kWp" />
-                  <ReadoutCard label="Battery autonomy"          value={result ? result.autonomyHours.toFixed(1) : '—'} unit="hrs" />
+                  <ReadoutCard label="Daily energy"                    value={result ? result.Ed_kWh.toFixed(2)       : '—'} unit="kWh/day" accent />
+                  <ReadoutCard label="Peak demand"                     value={result ? result.Peak_kW.toFixed(2)      : '—'} unit="kW"      amber />
+                  <ReadoutCard label="Recommended inverter size"       value={result ? String(result.invSize)         : '—'} unit="kW" />
+                  <ReadoutCard label="Recommended surge withstand"     value={result ? result.Surge_kW.toFixed(2)     : '—'} unit="kW"      amber />
+                  <ReadoutCard label="Recommended battery"             value={result ? result.CbattRounded.toFixed(1) : '—'} unit="kWh"     accent />
+                  <ReadoutCard label="Recommended PV array"            value={result ? result.PpvRounded.toFixed(2)   : '—'} unit="kWp" />
                 </div>
 
                 {/* Summary strip */}
