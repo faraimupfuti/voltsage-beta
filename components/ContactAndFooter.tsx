@@ -200,7 +200,7 @@ export function ContactSection() {
             <div>
               <h3 className="font-disp font-bold text-2xl text-white uppercase mb-2">Why VoltSage?</h3>
               <p className="text-slate-400 text-sm mb-6">
-                UK-registered. Engineer-led. Zero equipment sold.
+                Engineer-led. Zero equipment sold.
                 Our advice is genuinely independent because we earn nothing from the hardware you buy.
               </p>
 
@@ -326,7 +326,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/5 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-xs font-mono text-slate-600">
-            © {new Date().getFullYear()} VoltSage Solutions Ltd · UK-registered ·
+            © {new Date().getFullYear()} VoltSage Solutions Ltd ·
             Preliminary sizing tools for planning purposes only — not a substitute for a
             detailed engineering assessment.
           </p>
