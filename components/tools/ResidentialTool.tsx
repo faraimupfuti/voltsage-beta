@@ -337,7 +337,7 @@ export default function ResidentialTool() {
                 {/* ── column header row ── */}
                 {rows.length > 0 && (
                   <div className="grid gap-2 px-1"
-                    style={{ gridTemplateColumns: mode === 'advanced' ? '1fr 56px 80px 80px 32px' : '1fr 56px 80px 80px 32px' }}>
+                    style={{ gridTemplateColumns: mode === 'advanced' ? '1fr 52px 96px 96px 32px' : '1fr 52px 96px 96px 32px' }}>
                     <Label>Appliance</Label>
                     <Label>Qty</Label>
                     <Label>From</Label>
@@ -367,7 +367,7 @@ export default function ResidentialTool() {
                       >
                         {/* Main row */}
                         <div className="grid gap-2 items-center"
-                          style={{ gridTemplateColumns: '1fr 56px 80px 80px 32px' }}>
+                          style={{ gridTemplateColumns: '1fr 52px 96px 96px 32px' }}>
 
                           {/* Name */}
                           <div className="font-mono text-[11px] text-slate-200 truncate" title={name}>

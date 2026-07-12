@@ -85,7 +85,7 @@ function drawHistogram(canvas: HTMLCanvasElement, profile: number[]) {
     const x    = padL + h * barW
     const isNight = h < 6 || h >= 18
     const grad = ctx.createLinearGradient(0, padT + plotH - barH, 0, padT + plotH)
-    grad.addColorStop(0, isNight ? 'rgba(16,185,129,0.85)' : 'rgba(249,115,22,0.85)')
+    grad.addColorStop(0, isNight ? 'rgba(249,115,22,0.85)' : 'rgba(6,182,212,0.85)')
     grad.addColorStop(1, 'rgba(0,0,0,0.05)')
     ctx.fillStyle = grad
     ctx.fillRect(x + 1, padT + plotH - barH, Math.max(1, barW - 2), barH)
@@ -320,7 +320,7 @@ export default function AgriculturalTool() {
                 {/* Column headers */}
                 {rows.length > 0 && (
                   <div className="grid gap-2 px-1"
-                    style={{ gridTemplateColumns: '1fr 56px 80px 80px 32px' }}>
+                    style={{ gridTemplateColumns: '1fr 52px 96px 96px 32px' }}>
                     <Label>Equipment</Label>
                     <Label>Qty</Label>
                     <Label>From</Label>
@@ -347,7 +347,7 @@ export default function AgriculturalTool() {
                       >
                         {/* Main row */}
                         <div className="grid gap-2 items-center"
-                          style={{ gridTemplateColumns: '1fr 56px 80px 80px 32px' }}>
+                          style={{ gridTemplateColumns: '1fr 52px 96px 96px 32px' }}>
 
                           {/* Name */}
                           <div className="font-mono text-[11px] text-slate-200 truncate" title={r.name}>
@@ -536,11 +536,11 @@ export default function AgriculturalTool() {
                     </span>
                     <div className="flex gap-3 text-[9px] font-mono text-slate-500">
                       <span>
-                        <span className="inline-block w-2 h-2 rounded-sm mr-1 align-middle" style={{ background: '#f97316' }} />
+                        <span className="inline-block w-2 h-2 rounded-sm mr-1 align-middle" style={{ background: '#06b6d4' }} />
                         Day (06:00–18:00)
                       </span>
                       <span>
-                        <span className="inline-block w-2 h-2 rounded-sm mr-1 align-middle" style={{ background: '#10b981' }} />
+                        <span className="inline-block w-2 h-2 rounded-sm mr-1 align-middle" style={{ background: '#f97316' }} />
                         Night (18:00–06:00)
                       </span>
                     </div>
