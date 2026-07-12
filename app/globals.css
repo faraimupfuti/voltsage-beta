@@ -1,36 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* ---- Location dropdown: make optgroup headings visible ---- */
-.tool-input optgroup {
-  background: #0d1117;
-  color: #06b6d4;
-  font-weight: 700;
+:root {
+  --orange: #f97316;
+  --amber:  #eab308;
+  --teal:   #06b6d4;
+  --green:  #10b981;
+  --dark:   #050709;
+  --card:   #0d1117;
+  --card2:  #111827;
+  --border: #1f2937;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--dark);
+  color: #f1f5f9;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ---- Gradient text utility ---- */
+.brand-text {
+  background: linear-gradient(90deg, #f97316, #eab308 40%, #06b6d4 70%, #10b981);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.brand-text-amber {
+  background: linear-gradient(90deg, #f97316, #eab308);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.brand-text-teal {
+  background: linear-gradient(90deg, #06b6d4, #10b981);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ---- Glass card ---- */
+.glass {
+  background: rgba(13, 17, 23, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ---- 3D card hover ---- */
+.card-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.card-3d:hover {
+  transform: perspective(800px) rotateX(-3deg) rotateY(4deg) translateY(-6px);
+  box-shadow: 0 24px 60px rgba(6, 182, 212, 0.15), 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* ---- Glow effects ---- */
+.glow-orange { box-shadow: 0 0 30px rgba(249, 115, 22, 0.25); }
+.glow-teal   { box-shadow: 0 0 30px rgba(6, 182, 212, 0.25); }
+.glow-green  { box-shadow: 0 0 30px rgba(16, 185, 129, 0.25); }
+
+/* ---- Gradient border ---- */
+.gradient-border {
+  position: relative;
+  border-radius: 12px;
+}
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #f97316, #eab308, #06b6d4, #10b981);
+  z-index: -1;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+.gradient-border:hover::before { opacity: 1; }
+
+/* ---- Tool input styling ---- */
+.tool-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: #f1f5f9;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  transition: border-color 0.2s, background 0.2s;
+  outline: none;
+}
+.tool-input:focus {
+  border-color: #06b6d4;
+  background: rgba(6, 182, 212, 0.05);
+}
+.tool-input option { background: #111827; }
+
+/* ---- Readout value ---- */
+.readout-val {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* ---- Section heading ---- */
+.section-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-}
-.tool-input optgroup option {
-  color: #f1f5f9;
-  font-weight: 400;
-  font-size: 12px;
-  text-transform: none;
-  padding-left: 8px;
-}
-select optgroup {
-  background: #0d1117;
   color: #06b6d4;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
 }
-select option {
-  background: #111827;
-  color: #f1f5f9;
+.section-eyebrow::before {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background: #06b6d4;
 }
 
-/* ---- Time inputs: ensure full HH:MM always visible ---- */
-input[type="time"].tool-input,
-input[type="time"] {
-  min-width: 90px;
-  color: #f1f5f9 !important;
-  color-scheme: dark;
+/* ---- Custom scrollbar ---- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--dark); }
+::-webkit-scrollbar-thumb { background: #1f2937; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #374151; }
+
+/* ---- Animated background grid ---- */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(6, 182, 212, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 182, 212, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
 }
-input[type="number"].tool-input {
-  color: #f1f5f9 !important;
+
+/* ---- Tab active ---- */
+.tab-active {
+  background: linear-gradient(90deg, rgba(249,115,22,0.15), rgba(6,182,212,0.15));
+  border-color: rgba(6, 182, 212, 0.4) !important;
+  color: #06b6d4 !important;
 }
+
+/* ---- Meter bar ---- */
+.meter-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---- Problem card accent lines ---- */
+.problem-card { border-left: 3px solid transparent; }
+.problem-card:nth-child(1) { border-left-color: #f97316; }
+.problem-card:nth-child(2) { border-left-color: #eab308; }
+.problem-card:nth-child(3) { border-left-color: #06b6d4; }
+.problem-card:nth-child(4) { border-left-color: #10b981; }
+.problem-card:nth-child(5) { border-left-color: #8b5cf6; }
+.problem-card:nth-child(6) { border-left-color: #ec4899; }
+
+/* ---- Canvas hero ---- */
+#hero-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ---- Progress ring ---- */
+.ring-svg { transform: rotate(-90deg); }
+.ring-track { fill: none; stroke: rgba(255,255,255,0.06); stroke-width: 8; }
+.ring-fill  { fill: none; stroke-width: 8; stroke-linecap: round; transition: stroke-dashoffset 0.6s cubic-bezier(0.4,0,0.2,1); }
