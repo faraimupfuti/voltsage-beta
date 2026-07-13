@@ -18,28 +18,26 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background: var(--dark);
-  color: #f1f5f9;
-  font-family: 'Inter', sans-serif;
+  background-color: #050709 !important;
+  background: #050709 !important;
+  color: #f1f5f9 !important;
+  font-family: 'Inter', system-ui, sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
 }
 
-/* ---- Gradient text utility ---- */
 .brand-text {
   background: linear-gradient(90deg, #f97316, #eab308 40%, #06b6d4 70%, #10b981);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-
 .brand-text-amber {
   background: linear-gradient(90deg, #f97316, #eab308);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-
 .brand-text-teal {
   background: linear-gradient(90deg, #06b6d4, #10b981);
   -webkit-background-clip: text;
@@ -47,15 +45,13 @@ body {
   background-clip: text;
 }
 
-/* ---- Glass card ---- */
 .glass {
-  background: rgba(13, 17, 23, 0.7);
+  background: rgba(13, 17, 23, 0.85) !important;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.07);
 }
 
-/* ---- 3D card hover ---- */
 .card-3d {
   transform-style: preserve-3d;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -65,12 +61,10 @@ body {
   box-shadow: 0 24px 60px rgba(6, 182, 212, 0.15), 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* ---- Glow effects ---- */
 .glow-orange { box-shadow: 0 0 30px rgba(249, 115, 22, 0.25); }
 .glow-teal   { box-shadow: 0 0 30px rgba(6, 182, 212, 0.25); }
 .glow-green  { box-shadow: 0 0 30px rgba(16, 185, 129, 0.25); }
 
-/* ---- Gradient border ---- */
 .gradient-border {
   position: relative;
   border-radius: 12px;
@@ -87,14 +81,13 @@ body {
 }
 .gradient-border:hover::before { opacity: 1; }
 
-/* ---- Tool input styling ---- */
 .tool-input {
   width: 100%;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 8px;
   padding: 10px 14px;
-  color: #f1f5f9;
+  color: #f1f5f9 !important;
   font-family: 'JetBrains Mono', monospace;
   font-size: 14px;
   transition: border-color 0.2s, background 0.2s;
@@ -102,19 +95,10 @@ body {
 }
 .tool-input:focus {
   border-color: #06b6d4;
-  background: rgba(6, 182, 212, 0.05);
+  background: rgba(6, 182, 212, 0.06) !important;
 }
-.tool-input option { background: #111827; }
+.tool-input option { background: #111827; color: #f1f5f9; }
 
-/* ---- Readout value ---- */
-.readout-val {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 1;
-}
-
-/* ---- Section heading ---- */
 .section-eyebrow {
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
@@ -133,35 +117,20 @@ body {
   background: #06b6d4;
 }
 
-/* ---- Custom scrollbar ---- */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--dark); }
-::-webkit-scrollbar-thumb { background: #1f2937; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #374151; }
-
-/* ---- Animated background grid ---- */
 .bg-grid {
+  background-color: #050709;
   background-image:
-    linear-gradient(rgba(6, 182, 212, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(6, 182, 212, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(6, 182, 212, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 182, 212, 0.04) 1px, transparent 1px);
   background-size: 48px 48px;
 }
 
-/* ---- Tab active ---- */
 .tab-active {
   background: linear-gradient(90deg, rgba(249,115,22,0.15), rgba(6,182,212,0.15));
   border-color: rgba(6, 182, 212, 0.4) !important;
   color: #06b6d4 !important;
 }
 
-/* ---- Meter bar ---- */
-.meter-fill {
-  height: 100%;
-  border-radius: 4px;
-  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* ---- Problem card accent lines ---- */
 .problem-card { border-left: 3px solid transparent; }
 .problem-card:nth-child(1) { border-left-color: #f97316; }
 .problem-card:nth-child(2) { border-left-color: #eab308; }
@@ -170,15 +139,62 @@ body {
 .problem-card:nth-child(5) { border-left-color: #8b5cf6; }
 .problem-card:nth-child(6) { border-left-color: #ec4899; }
 
-/* ---- Canvas hero ---- */
+.ring-svg   { transform: rotate(-90deg); }
+.ring-track { fill: none; stroke: rgba(255,255,255,0.06); stroke-width: 8; }
+.ring-fill  {
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.6s cubic-bezier(0.4,0,0.2,1);
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #050709; }
+::-webkit-scrollbar-thumb { background: #1f2937; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #374151; }
+
+/* Location dropdown optgroup headings */
+select optgroup {
+  background: #0d1117;
+  color: #06b6d4;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+select optgroup option,
+select option {
+  background: #111827;
+  color: #f1f5f9;
+  font-weight: 400;
+  font-size: 12px;
+  text-transform: none;
+}
+
+/* Time + number inputs always white text */
+input[type="time"],
+input[type="time"].tool-input {
+  min-width: 92px;
+  color: #f1f5f9 !important;
+  color-scheme: dark;
+}
+input[type="number"],
+input[type="number"].tool-input,
+input[type="text"],
+input[type="text"].tool-input,
+textarea.tool-input {
+  color: #f1f5f9 !important;
+}
+
+.meter-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 #hero-canvas {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
 }
-
-/* ---- Progress ring ---- */
-.ring-svg { transform: rotate(-90deg); }
-.ring-track { fill: none; stroke: rgba(255,255,255,0.06); stroke-width: 8; }
-.ring-fill  { fill: none; stroke-width: 8; stroke-linecap: round; transition: stroke-dashoffset 0.6s cubic-bezier(0.4,0,0.2,1); }
