@@ -100,9 +100,9 @@ export function ContactSection() {
                   <label className="text-[10px] font-mono uppercase text-slate-500 block mb-1">Service needed</label>
                   <select value={service} onChange={e => setService(e.target.value)} className="tool-input text-sm">
                     <option>Learn how to use a sizing tool</option>
-                    <option>Independent Design Review</option>
-                    <option>Engineering Design Package</option>
-                    <option>Other / general enquiry</option>
+                    <option>Qoute Review</option>
+                    <option>General enquiry</option>
+                    <option>Other</option>
                   </select>
                 </div>
                 <div>
