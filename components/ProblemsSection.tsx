@@ -3,40 +3,40 @@ import { AlertTriangle, BadgeDollarSign, HelpCircle, FileWarning, Gauge, ShieldO
 
 const PROBLEMS = [
   {
-    icon: <Gauge size={28} />,
-    title: 'Wrong system size — every time',
-    body: 'Most installers guess. They oversize so they look generous, or undersize to win on price. Either way, you end up with a system that underperforms or drains your wallet unnecessarily.',
-    stat: 'Over 60% of systems are incorrectly sized on first installation.',
+    icon: <Gauge size={26} />,
+    title: 'Installers size systems by guessing',
+    body: 'Most solar installers don\'t do a proper load analysis before recommending a system size. They estimate based on your electricity bill or the number of bedrooms — not on what appliances you actually run and when. The result is a system that\'s either too big (you overpay) or too small (it trips and underperforms).',
+    stat: 'A 10-minute load analysis prevents years of regret.',
   },
   {
-    icon: <BadgeDollarSign size={28} />,
-    title: 'You can\'t compare quotes fairly',
-    body: 'One installer quotes a 3kW inverter, another quotes 5kW — for the same house. Without knowing your actual peak load and night energy, there is no way to judge which one is right.',
-    stat: 'Quotes for identical homes can differ by 40% or more.',
+    icon: <BadgeDollarSign size={26} />,
+    title: 'Three quotes, three different systems — which is right?',
+    body: 'One installer says 5 kW, another says 8 kW, a third says 10 kW — all for the same house. Without knowing your own numbers, you can\'t judge which is correct. You end up choosing on price, not on accuracy.',
+    stat: 'Know your numbers first. Then compare quotes on equal terms.',
   },
   {
-    icon: <HelpCircle size={28} />,
-    title: 'Jargon keeps you in the dark',
-    body: 'kWp, DoD, PSH, BoQ, SLD — solar comes with a wall of acronyms designed to keep you dependent on whoever is selling. You deserve to understand what you are buying.',
-    stat: 'Most buyers sign contracts without understanding 3+ key specifications.',
+    icon: <HelpCircle size={26} />,
+    title: 'Solar jargon keeps buyers in the dark',
+    body: 'kWp, DoD, PSH, SLD, BoQ — the industry is full of technical terms that most buyers don\'t understand. This information gap benefits sellers, not buyers. You should understand what you\'re buying before you sign anything.',
+    stat: 'Our tools and articles explain everything in plain English.',
   },
   {
-    icon: <FileWarning size={28} />,
-    title: 'Battery sizing is guesswork',
-    body: 'How many hours backup do you actually need? What load can your battery support? These questions have precise answers — but most people never know them before they spend $2,000–$10,000.',
-    stat: 'Battery autonomy assumptions are wrong on most residential systems.',
+    icon: <FileWarning size={26} />,
+    title: 'Nobody tells you how long your battery will actually last',
+    body: 'A "10 kWh battery" doesn\'t mean 10 kWh of backup. Depth of discharge, efficiency losses and your actual load all reduce what you get. Most buyers find this out after installation — when it\'s too late to change anything.',
+    stat: 'Use the Battery Runtime Calculator before you buy a battery.',
   },
   {
-    icon: <AlertTriangle size={28} />,
-    title: 'Agricultural loads are completely different',
-    body: 'A borehole pump or milking machine has motor starting currents 3× its rated power. Size your inverter just for running loads and it trips every time the pump kicks on.',
-    stat: 'Motor-driven ag loads need surge capacity up to 3× running power.',
+    icon: <AlertTriangle size={26} />,
+    title: 'Farms and agricultural sites need special treatment',
+    body: 'A borehole pump drawing 1.1 kW while running can demand 3–4 kW when it starts. If your inverter isn\'t sized for that startup surge, it will trip every single time the pump kicks on. This is one of the most common — and most preventable — agricultural solar failures.',
+    stat: 'The agricultural sizing tool accounts for motor starting currents automatically.',
   },
   {
-    icon: <ShieldOff size={28} />,
-    title: 'No independent engineering review',
-    body: 'Every company that reviews your quote also sells equipment — which means you never get truly unbiased advice. VoltSage earns nothing from equipment sales. Ever.',
-    stat: 'No conflict of interest. No equipment sold. Just engineering.',
+    icon: <ShieldOff size={26} />,
+    title: 'Every company that reviews your quote also wants to sell you something',
+    body: 'There is no such thing as a free and unbiased review from a company that sells equipment. VoltSage earns nothing from the panels, inverters or batteries you buy. Our only business is helping you get the right information — before anyone tries to sell you anything.',
+    stat: 'No equipment sold. No commissions. Just engineering.',
   },
 ]
 
@@ -44,16 +44,17 @@ export default function ProblemsSection() {
   return (
     <section id="problems" className="py-24 bg-grid">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
+
         <div className="max-w-2xl mb-16">
           <div className="section-eyebrow">The solar industry problem</div>
           <h2 className="font-disp font-extrabold text-4xl sm:text-5xl text-white uppercase leading-tight mb-5">
-            Six reasons people<br />
-            <span className="brand-text">overpay and underperform</span>
+            Six things that go wrong<br />
+            <span className="brand-text">when you skip the sizing step</span>
           </h2>
           <p className="text-slate-400 text-lg leading-relaxed">
-            The solar installation industry is full of information gaps, misaligned incentives,
-            and technical complexity that benefits sellers — not buyers.
-            These tools exist to close that gap.
+            Most solar problems are not caused by bad equipment or bad installers.
+            They are caused by not knowing the right system size before the purchase decision is made.
+            VoltSage exists to fix that — for free, before you spend a cent.
           </p>
         </div>
 
@@ -61,15 +62,14 @@ export default function ProblemsSection() {
           {PROBLEMS.map((p, i) => (
             <div
               key={i}
-              className="glass rounded-2xl p-6 problem-card card-3d group hover:border-white/10 transition-all duration-300"
-              style={{ animationDelay: `${i * 80}ms` }}
+              className="glass rounded-2xl p-6 problem-card card-3d group transition-all duration-300"
             >
               <div className="flex items-start gap-4 mb-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center"
-                  style={{ background: 'rgba(249,115,22,0.1)' }}>
+                <div className="flex-shrink-0 w-11 h-11 rounded-xl flex items-center justify-center"
+                  style={{ background: 'rgba(249,115,22,0.10)' }}>
                   <span className="brand-text-amber">{p.icon}</span>
                 </div>
-                <h3 className="font-disp font-bold text-xl text-white uppercase leading-tight pt-1">
+                <h3 className="font-disp font-bold text-lg text-white uppercase leading-tight pt-1">
                   {p.title}
                 </h3>
               </div>
@@ -82,20 +82,20 @@ export default function ProblemsSection() {
         </div>
 
         {/* CTA strip */}
-        <div className="mt-16 gradient-border rounded-2xl overflow-hidden">
+        <div className="mt-14 gradient-border rounded-2xl overflow-hidden">
           <div className="glass p-8 flex flex-col sm:flex-row items-center gap-6 justify-between">
             <div>
               <h3 className="font-disp font-bold text-2xl text-white uppercase mb-2">
-                The solution is a number, not a guess.
+                Use VoltSage before you talk to any installer.
               </h3>
               <p className="text-slate-400 text-sm">
-                Use the same calculation methodology engineers use — for free, right now, in under 5 minutes.
+                It takes 5 minutes. It&apos;s free. And it could save you thousands.
               </p>
             </div>
             <a
               href="#sizing"
               className="flex-shrink-0 px-8 py-3 rounded-xl font-bold font-mono uppercase tracking-wider text-dark text-sm whitespace-nowrap hover:scale-105 transition-transform"
-              style={{ background: 'linear-gradient(90deg, #f97316, #eab308)' }}
+              style={{ background: 'linear-gradient(90deg,#f97316,#eab308)' }}
             >
               Start Sizing Free →
             </a>
