@@ -41,22 +41,22 @@ export function ContactSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
           {[
             {
-              sub: 'Energy Advisory Session',
-              name: 'Ask an Engineer',
-              desc: 'A one-on-one conversation with a VoltSage engineer. We help you understand your energy needs and what size system you actually require — before you commit to buying anything.',
-              value: 'Ask an Engineer',
+              sub: 'Sizing tool advisory',
+              name: 'Learn how to use a sizing tool',
+              desc: 'A one-on-one conversation with a VoltSage representative. We help you understand your energy needs and what size system you actually require — before you commit to buying anything.',
+              value: 'Learn how to use a sizing tool',
             },
             {
               sub: 'Check a quote you already have',
-              name: 'Independent Design Review',
+              name: 'Solar Quote Review',
               desc: 'Already received a quote from an installer? Send it to us. We check whether the equipment is the right size for your needs and whether the specification makes engineering sense — with nothing to sell you.',
-              value: 'Independent Design Review',
+              value: 'Solar Quote Review',
             },
             {
-              sub: 'Full system design',
-              name: 'Engineering Design Package',
-              desc: 'A complete, engineer-prepared design for your solar system — sizing verification, single-line diagram, bill of quantities and full specifications. Contact us to discuss your project.',
-              value: 'Engineering Design Package',
+              sub: 'General questions',
+              name: 'General solar questions',
+              desc: 'Contact us to discuss your solar questions.',
+              value: 'General solar questions',
             },
           ].map((s, i) => (
             <div key={i} className="gradient-border rounded-2xl overflow-hidden card-3d">
@@ -99,7 +99,7 @@ export function ContactSection() {
                 <div>
                   <label className="text-[10px] font-mono uppercase text-slate-500 block mb-1">Service needed</label>
                   <select value={service} onChange={e => setService(e.target.value)} className="tool-input text-sm">
-                    <option>Ask an Engineer</option>
+                    <option>Learn how to use a sizing tool</option>
                     <option>Independent Design Review</option>
                     <option>Engineering Design Package</option>
                     <option>Other / general enquiry</option>
